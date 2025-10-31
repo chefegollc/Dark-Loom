@@ -1,0 +1,68 @@
+site_name: Dark-Loom Documentation
+site_description: AI Weaver - An advanced AI orchestration and agent framework
+site_author: Dark-Loom Contributors
+repo_url: https://github.com/chefegollc/Dark-Loom
+repo_name: chefegollc/Dark-Loom
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quickstart.md
+      - Configuration: getting-started/configuration.md
+  - Core Concepts:
+      - Agents: concepts/agents.md
+      - Weaver: concepts/weaver.md
+      - Tools: concepts/tools.md
+  - API Reference:
+      - Core: api/core.md
+      - Agents: api/agents.md
+      - Utils: api/utils.md
+  - Examples:
+      - Basic Usage: examples/basic.md
+      - Advanced: examples/advanced.md
