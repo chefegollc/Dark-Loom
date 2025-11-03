@@ -1,0 +1,17 @@
+weaver:
+  max_threads: 4
+  timeout: 300
+  verbose: true
+
+tasks:
+  - name: initialize_model
+    description: "Initialize the AI model"
+    enabled: true
+
+  - name: process_data
+    description: "Process input data through pipeline"
+    enabled: true
+
+  - name: generate_output
+    description: "Generate final output"
+    enabled: true
